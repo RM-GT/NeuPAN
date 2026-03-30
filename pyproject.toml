@@ -12,7 +12,7 @@ readme = "README.md"
 dependencies = [
     'cvxpylayers',
     'numpy',
-    'scipy<=1.13.0',
+    'scipy',
     'rich',
     'dill',
     'gctl==1.2',
@@ -27,8 +27,9 @@ dependencies = [
 irsim = ['ir-sim>=2.4.0']
 all = ['ir-sim>=2.4.0']
 
-[tool.setuptools]
-py-modules = ['neupan']
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["neupan*"]
 
 
 
